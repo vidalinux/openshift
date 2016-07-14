@@ -1,0 +1,19 @@
+{
+ "kind": "Service",
+ "apiVersion": "v1",
+ "metadata": {
+   "name": "openerp6-openshift"
+ },
+ "spec": { 
+     "ports": [
+         {
+        "protocol": "TCP",
+        "port": 80,
+        "targetPort": 8069
+         }
+     ],
+     "selector": {
+     "name": "openerp6-openshift"
+    }
+  }
+}

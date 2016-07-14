@@ -1,0 +1,14 @@
+{
+ "apiVersion": "v1",
+ "kind": "Route",
+ "metadata": {
+   "name": "wordpress-openshift"
+ },
+ "spec": { 
+ "host": "wordpress.apps.example.com",
+ "to": {
+   "kind": "Service",
+   "name": "wordpress-openshift"
+    }
+  }
+}

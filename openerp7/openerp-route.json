@@ -1,0 +1,14 @@
+{
+ "apiVersion": "v1",
+ "kind": "Route",
+ "metadata": {
+   "name": "openerp7-openshift"
+ },
+ "spec": { 
+ "host": "openerp.ovoxcloud.com",
+ "to": {
+   "kind": "Service",
+   "name": "openerp7-openshift"
+    }
+  }
+}

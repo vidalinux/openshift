@@ -1,0 +1,46 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "name": "openerp6",
+        "labels": {
+            "name": "openerp6-openshift"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "openerp6",
+                "image": "172.30.59.28:5000/vidalinux/openerp6",
+                "ports": [
+                    {
+                        "containerPort": 8069
+                    }
+                ],
+                "env": [
+                    {
+                        "name": "POSTGRES_USER",
+                        "value": "openerp"
+                    },
+                    {
+                        "name": "POSTGRES_PASSWORD",
+                        "value": "openerp"
+                    },
+                    {
+                        "name": "POSTGRES_PORT",
+                        "value": "5432"
+                    },
+                    {
+                        "name": "POSTGRES_DBNAME",
+                        "value": "openerp6"
+                    },
+                    {
+                     	"name": "POSTGRES_HOST",
+                        "value": "postgres"
+                    }
+
+                ]
+            }
+        ]
+    }
+}
