@@ -1,0 +1,14 @@
+{
+ "apiVersion": "v1",
+ "kind": "Route",
+ "metadata": {
+   "name": "starassist-openshift"
+ },
+ "spec": { 
+ "host": "starassist.ovoxcloud.com",
+ "to": {
+   "kind": "Service",
+   "name": "starassist-openshift"
+    }
+  }
+}

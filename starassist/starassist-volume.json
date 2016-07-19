@@ -1,0 +1,20 @@
+{
+   "apiVersion": "v1",
+   "kind": "PersistentVolume",
+   "metadata": {
+       "name": "starassist-volume",
+       "labels": {
+           "deploymentconfig": "starassist-openshift"
+       }
+   },
+   "spec": {
+       "capacity": {
+           "storage": "1Gi"
+       },
+       "accessModes": [ "ReadWriteMany" ],
+       "nfs": {
+           "path": "/var/export/starassist",
+           "server": "originmaster.example.com"
+       }
+   }
+}

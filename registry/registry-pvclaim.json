@@ -2,16 +2,16 @@
    "apiVersion": "v1",
    "kind": "PersistentVolumeClaim",
    "metadata": {
-       "name": "wordpress-pvclaim",
+       "name": "registry-pvclaim",
        "labels": {
-           "deploymentconfig": "wordpress-openshift"
+           "deploymentconfig": "docker-registry"
        }
    },
    "spec": {
        "accessModes": [ "ReadWriteMany" ],
        "resources": {
            "requests": {
-               "storage": "1Gi"
+               "storage": "5Gi"
            }
        }
    }

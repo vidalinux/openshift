@@ -1,0 +1,4 @@
+#!/bin/bash
+
+OPENSHIFT_VERSION=v1.2.0
+oadm registry --service-account=registry --config=/etc/origin/master/admin.kubeconfig --credentials=/etc/origin/master/openshift-registry.kubeconfig --images=openshift/origin-haproxy-router:$OPENSHIFT_VERSION
